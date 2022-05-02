@@ -1,13 +1,31 @@
 const db = require('../config/connection');
-const { Post } = require('../models');
-
-const postData = require('./postData.json');
+const { User, Post } = require('../models');
+const userSeeds = require('./user.json');
+const postSeeds = require('./postData.json');
 
 db.once('open', async () => {
-  await Post.deleteMany({});
+  try {
+    await Post.deleteMany({});
+    await User.deleteMany({});
 
-  const postSeeds = await Post.insertMany(postData);
+    await User.create(userSeeds);
 
-  console.log('Posts seeded!');
+    for (let i = 0; i < postSeeds.length; i++) {
+      const { _id, postOwner } = await Post.create(postSeeds[i]);
+      const user = await User.findOneAndUpdate(
+        { username: postOwner },
+        {
+          $addToSet: {
+            posts: _id,
+          },
+        }
+      );
+    }
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  console.log('all done!');
   process.exit(0);
 });
