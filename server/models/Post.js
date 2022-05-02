@@ -28,8 +28,6 @@ const postSchema = new Schema({
       commentText: {
         type: String,
         required: true,
-        minlength: 1,
-        maxlength: 280,
       },
       commentOwner: {
         type: String,
@@ -37,7 +35,7 @@ const postSchema = new Schema({
       },
       createdAt: {
         type: Date,
-        default: Date.now,
+        default: Date.now, 
         get: (timestamp) => dateFormat(timestamp),
       },
     },
