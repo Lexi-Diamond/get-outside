@@ -1,24 +1,49 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
-const matchupSchema = new Schema({
-  tech1: {
-    type: String,
+const postSchema = new Schema({
+  title: {
+    type: 'string',
     required: true,
   },
-  tech2: {
+  postText: {
+    type: String,
+    required: 'You need to make a post',
+    minlength: 1,
+    maxlength: 280,
+    trim: true,
+  },
+  postOwner: {
     type: String,
     required: true,
+    trim: true,
   },
-  tech1_votes: {
-    type: Number,
-    default: 0,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
-  tech2_votes: {
-    type: Number,
-    default: 0,
-  },
+  comments: [
+    {
+      commentText: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 280,
+      },
+      commentOwner: {
+        type: String,
+        required: true,
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+      },
+    },
+  ],
 });
 
-const Matchup = model('Matchup', matchupSchema);
+const Post = model('Post', postSchema);
 
-module.exports = Matchup;
+module.exports = Post;
