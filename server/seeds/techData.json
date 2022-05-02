@@ -1,35 +1,17 @@
 [
   {
-    "name": "JavaScript"
+    "title": "The hike",
+    "postText": "This hike was pretty hard, it was steep",
+    "postOwner": "John Doe"
   },
   {
-    "name": "HTML"
+    "title": "The Bike Ride",
+    "postText": "This bike ride was pretty hard, it was steep",
+    "postOwner": "Jane Doe"
   },
   {
-    "name": "CSS"
-  },
-  {
-    "name": "Node.js"
-  },
-  {
-    "name": "Express.js"
-  },
-  {
-    "name": "MySQL"
-  },
-  {
-    "name": "MongoDB"
-  },
-  {
-    "name": "React"
-  },
-  {
-    "name": "GraphQL"
-  },
-  {
-    "name": "Sequelize"
-  },
-  {
-    "name": "Handlebars.js"
+    "title": "Paddle Boarding",
+    "postText": "This activity was so easy",
+    "postOwner": "Josh Doe"
   }
 ]
