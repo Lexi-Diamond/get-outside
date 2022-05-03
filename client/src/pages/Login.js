@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import { LOGIN_USER } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -18,11 +18,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function SignIn(props) {
 
 
   const [formState, setFormState] = useState({ email: '', password: '' });
-  // const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [login, { error, data }] = useMutation(LOGIN_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,12 +32,6 @@ export default function SignIn() {
       [name]: value,
     });
   };
-
-  // clear form values
-  setFormState({
-    email: '',
-    password: '',
-  });
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
