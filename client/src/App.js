@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/header';
 import Footer from './components/footer';
+import SignUp from './components/signup';
 
 
 function App() {
@@ -22,12 +23,12 @@ function App() {
               />
           <Route 
                 path="/signup" 
-                element={<Signup />}
+                element={<SignUp />}
               />
           <Route 
-            path='/profile' 
-            element={<Profile />} 
-          />
+                path='/profile' 
+                element={<Profile />} 
+              />
         </Routes>
         <Footer />
     </Router>
