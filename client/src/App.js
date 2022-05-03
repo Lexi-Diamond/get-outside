@@ -1,11 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Homepage from './pages/Homepage';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Header from './components/header';
+import Footer from './components/footer';
+
 
 function App() {
   return (
-    <div className="App">
-      hello world
-    </div>
+     
+      <Router>
+        <Header />
+        <Routes>
+          <Route 
+            path='/' 
+            element={<Homepage />} 
+          />
+          <Route 
+                path="/login" 
+                element={<Login />}
+              />
+          <Route 
+                path="/signup" 
+                element={<Signup />}
+              />
+          <Route 
+            path='/profile' 
+            element={<Profile />} 
+          />
+        </Routes>
+        <Footer />
+    </Router>
   );
 }
 
