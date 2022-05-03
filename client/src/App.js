@@ -1,6 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Signup from "./pages/Signup";
+import React  from 'react';
+// import Homepage from './pages/Homepage';
+// import Login from './pages/Login';
+// import Profile from './pages/Profile';
+// import Header from './components/header';
+// import Footer from './components/footer';
+import SignUp from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
@@ -17,7 +21,7 @@ function App() {
               /> */}
           <Route
                 path="/signup"
-                element={<Signup />}
+                element={<SignUp />}
               />
           {/* <Route
                 path='/profile'
