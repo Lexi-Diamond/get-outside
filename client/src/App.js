@@ -11,7 +11,7 @@ import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/header';
-// import Footer from './components/footer';
+import Footer from './components/footer/footer';
 import SignUp from './pages/Signup';
 import SinglePost from './pages/SinglePost';
 
@@ -70,9 +70,9 @@ function App() {
         </Routes>
 
         <Footer />
-    </Router>
+      </Router>
 
-        {/* <Footer /> */}
+      <Footer />
     </ApolloProvider>
 
   );
