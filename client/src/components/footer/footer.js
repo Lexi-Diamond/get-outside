@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        www.gooutside.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -24,7 +24,7 @@ export default function Footer() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        minHeight: '20vh',
       }}
     >
       <CssBaseline />
