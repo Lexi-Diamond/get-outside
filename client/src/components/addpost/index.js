@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 
-import { ADD_POST } from '../../utils/mutations';
-import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
+import { ADD_POST } from "../../utils/mutations";
+import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
 
-import Auth from '../../utils/auth';
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Grid from "@mui/material/Grid";
+
+import Auth from "../../utils/auth";
 
 const PostForm = () => {
-  const [postText, setpostText] = useState('');
+  const [open, setOpen] = useState(false);
+  const [formState, setFormState] = useState({
+    postText: "",
+  });
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [postText, setPostText] = useState("");
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -38,72 +60,90 @@ const PostForm = () => {
     event.preventDefault();
 
     try {
-      console.log(postText)
+      console.log(postText);
       const { data } = await addPost({
-
         variables: {
           postText,
           postOwner: Auth.getProfile().data.username,
         },
       });
 
-      setpostText('');
+      setPostText("");
     } catch (err) {
       console.error(err);
     }
+    handleClose();
   };
+
+  // const handleSubmit = async () => {
+  //   const { data } = await addPost(formState)
+  // }
 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'postText' && value.length <= 280) {
-      setpostText(value);
+    if (name === "postText" && value.length <= 280) {
+      setPostText(value);
+      // setFormState({...formState, postText: value});
       setCharacterCount(value.length);
     }
   };
 
   return (
     <div>
-      <h3>Post a Blog</h3>
 
       {Auth.loggedIn() ? (
         <>
-          <p
-            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
-              }`}
+          {/* <p
+            className={`m-0 ${
+              characterCount === 280 || error ? "text-danger" : ""
+            }`}
           >
             Character Count: {characterCount}/280
-          </p>
-          <form
-            className="flex-row justify-center justify-space-between-md align-center"
-            onSubmit={handleFormSubmit}
-          >
-            <div className="col-12 col-lg-9">
-              <textarea
-                name="postText"
-                placeholder="Here's a new thought..."
-                value={postText}
-                className="form-input w-100"
-                style={{height: '10vh', width: '15vw', lineHeight: '1.5', resize: 'none' }}
-                onChange={handleChange}
-              ></textarea>
+          </p> */}
+          <form className="flex-row justify-center justify-space-between-md align-center">
+            <div className="addpostDiv" style={{maxHeight: 20}}>
+              <Button className="addpostBtn" variant="outlined" onClick={handleClickOpen}>
+                Click here to create a post
+              </Button>
+              <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>CREATE A POST</DialogTitle>
+                <Grid container gap={2}>
+                  <Grid item xs={12}>
+                    <DialogContent>
+                      <DialogContentText>
+                        Describe your most recent outdoor activity.
+                      </DialogContentText>
+                      <TextField
+                        autoFocus
+                        margin="dense"
+                        value={postText}
+                        label="Description"
+                        type="text"
+                        fullWidth
+                        variant="standard"
+                        multiline
+                        onChange={handleChange}
+                        name="postText"
+                      />
+                    </DialogContent>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <DialogActions>
+                      <Button onClick={handleClose}>Cancel</Button>
+                      <Button onClick={handleFormSubmit}>Post</Button>
+                    </DialogActions>
+                  </Grid>
+                </Grid>
+              </Dialog>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Post
-              </button>
-            </div>
-            {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
-            )}
+            {error && <div style={{ color: "red" }}>{error.message}</div>}
           </form>
         </>
       ) : (
         <p>
-          You need to be logged in to share your posts. Please{' '}
+          You need to be logged in to share your posts. Please{" "}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
