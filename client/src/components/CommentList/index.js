@@ -6,10 +6,10 @@ const CommentList = ({ comments = [] }) => {
   }
 
   return (
-    <>
+    <div className='commentListDiv'>
       <h3
         className="p-5 display-inline-block"
-        style={{ borderBottom: '1px dotted #1a1a1a' }}
+        style={{ borderBottom: '1px solid #1a1a1a' }}
       >
         Comments
       </h3>
@@ -29,7 +29,7 @@ const CommentList = ({ comments = [] }) => {
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

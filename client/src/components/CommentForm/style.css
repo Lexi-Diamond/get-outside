@@ -1,0 +1,13 @@
+.m-3.p-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.commentDiv {
+  width: 80%;
+  text-align: center;
+}
+
+textarea.form-input.w-100 {
+  width: 100%;
+}

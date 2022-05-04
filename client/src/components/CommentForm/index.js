@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import './style.css';
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
@@ -40,7 +41,7 @@ const CommentForm = ({ postId }) => {
   };
 
   return (
-    <div>
+    <div className='commentDiv'>
       <h4>What are your thoughts on this post?</h4>
 
       {Auth.loggedIn() ? (

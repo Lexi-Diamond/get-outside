@@ -39,12 +39,13 @@ const SinglePost = () => {
           <a className="btn_primary" href='/'>Go Back</a>
         </div>
       </div>
-      <div className="my-5">
-        <CommentList comments={post.comments} />
-      </div>
       <div className="m-3 p-4">
         <CommentForm postId={post._id} />
       </div>
+      <div className="my-5">
+        <CommentList comments={post.comments} />
+      </div>
+
 
     </>
   );
