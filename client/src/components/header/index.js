@@ -83,8 +83,8 @@ const pages = [{
   name: 'Profile',
   link: '/me'
 }, {
-  name: 'Blog',
-  link: '/blog'
+  name: 'About',
+  link: '/about'
 }];
 
 const settings = [{
