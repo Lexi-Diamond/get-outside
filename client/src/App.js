@@ -3,7 +3,7 @@ import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 // import Profile from './pages/Profile';
 // import Header from './components/header';
-// import Footer from './components/footer';
+import Footer from './components/footer/footer';
 import SignUp from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
@@ -28,7 +28,7 @@ function App() {
                 element={<Profile />}
               /> */}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
     </Router>
   );
 }
