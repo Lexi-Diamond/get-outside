@@ -64,6 +64,7 @@ export default function SignIn(props) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            height: '100%',
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -72,7 +73,7 @@ export default function SignIn(props) {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleFormSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={handleFormSubmit} noValidate sx={{ mt: 1, height: '100%' }}>
             <TextField
               margin="normal"
               required
