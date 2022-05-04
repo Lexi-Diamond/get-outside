@@ -212,16 +212,30 @@ div#navbarSupportedContent {
 }
 
 .navBtn {
-  padding: .7rem;
   font-size: 15px;
-  border-radius: 15px;
   text-decoration: none;
-  color: #fff;
-  background-color: #0a0f2c;
+  color: black;
   margin-right: 2rem;
+  background-color: white;
+  border: none;
+  margin-left: 1.2rem;
 
 }
 
 .navBtn:hover {
   cursor: pointer;
+}
+.navBarLinks {
+  color: white;
+  text-decoration: none;
+}
+.navSandwich {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navHamburger {
+  text-decoration: none;
+  color: black;
 }
