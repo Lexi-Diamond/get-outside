@@ -74,12 +74,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Auth from '../../utils/auth';
+import './styles.css';
 const pages = [{
   name: 'Home',
   link: '/'
 },
 {
-  name: 'profile',
+  name: 'Profile',
   link: '/me'
 }, {
   name: 'Blog',
@@ -87,7 +88,7 @@ const pages = [{
 }];
 
 const settings = [{
-  name: 'profile',
+  name: 'Profile',
   link: '/me'
 }];
 
@@ -159,7 +160,7 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link to={page.link}> <Typography textAlign="center">{page.name}</Typography></Link>
+                  <Link className="navHamburger" to={page.link}> <Typography textAlign="center">{page.name}</Typography></Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -172,14 +173,14 @@ const Header = () => {
           >
             Go OutSide
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'white' }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link to={page.link}>{page.name}</Link>
+                <Link className="navBarLinks" to={page.link}>{page.name}</Link>
               </Button>
             ))}
           </Box>
@@ -206,16 +207,20 @@ const Header = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
+            <div className="navSandwich">
               {settings.map((setting) => (
                 <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
-                  <Link to={setting.link}><Typography textAlign="center">{setting.name}</Typography></Link>
+                  <Link className="navBtn" to={setting.link}><Typography textAlign="center">{setting.name}</Typography></Link>
                 </MenuItem>
               ))}
               {Auth.loggedIn() ? (
                 <button className="navBtn" onClick={logout}>
                   Logout
                 </button>
-              ) : (
+              
+              )
+              : (
+
                 <>
                   <Link className="navBtn" to="/login">
                     Login
@@ -225,6 +230,7 @@ const Header = () => {
                   </Link>
                 </>
               )}
+              </div>
             </Menu>
           </Box>
         </Toolbar>
