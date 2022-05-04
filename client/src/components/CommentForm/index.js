@@ -2,52 +2,29 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_POST } from '../../utils/mutations';
-import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
+import { ADD_COMMENT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const PostForm = () => {
-  const [postText, setpostText] = useState('');
-
+const CommentForm = ({ postId }) => {
+  const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addPost, { error }] = useMutation(ADD_POST, {
-    update(cache, { data: { addPost } }) {
-      try {
-        const { posts } = cache.readQuery({ query: QUERY_POSTS });
-
-        cache.writeQuery({
-          query: QUERY_POSTS,
-          data: { posts: [addPost, ...posts] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
-
-      // update me object's cache
-      // const { me } = cache.readQuery({ query: QUERY_ME });
-      // cache.writeQuery({
-      //   query: QUERY_ME,
-      //   data: { me: { ...me, posts: [...me.posts, addPost] } },
-      // });
-    },
-  });
+  const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      console.log(postText)
-      const { data } = await addPost({
-
+      const { data } = await addComment({
         variables: {
-          postText,
-          postOwner: Auth.getProfile().data.username,
+          postId,
+          commentText,
+          commentAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setpostText('');
+      setCommentText('');
     } catch (err) {
       console.error(err);
     }
@@ -56,15 +33,15 @@ const PostForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'postText' && value.length <= 280) {
-      setpostText(value);
+    if (name === 'commentText' && value.length <= 280) {
+      setCommentText(value);
       setCharacterCount(value.length);
     }
   };
 
   return (
     <div>
-      <h3>Post a Blog</h3>
+      <h4>What are your thoughts on this post?</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -73,6 +50,7 @@ const PostForm = () => {
               }`}
           >
             Character Count: {characterCount}/280
+            {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
@@ -80,9 +58,9 @@ const PostForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="postText"
-                placeholder="Here's a new thought..."
-                value={postText}
+                name="commentText"
+                placeholder="Add your comment..."
+                value={commentText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -91,14 +69,9 @@ const PostForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Post
+                Add Comment
               </button>
             </div>
-            {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
-            )}
           </form>
         </>
       ) : (
@@ -111,4 +84,4 @@ const PostForm = () => {
   );
 };
 
-export default PostForm;
+export default CommentForm;
