@@ -179,7 +179,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page.name}
+                <Link to={page.link}>{page.name}</Link>
               </Button>
             ))}
           </Box>

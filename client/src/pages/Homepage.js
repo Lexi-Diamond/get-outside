@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import PostList from '../components/PostList';
-import AddPost from '../components/AddPost';
+import AddPost from '../components/Addpost';
 
 import { QUERY_POSTS } from '../utils/queries';
 
