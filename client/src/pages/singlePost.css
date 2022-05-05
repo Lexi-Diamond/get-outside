@@ -145,3 +145,21 @@ p {
 .btn_primary:hover {
   box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
 }
+/* About Page */
+
+.aboutHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.5);
+  height: 40vh;
+  background: url(https://images.unsplash.com/photo-1520273288003-a449a25c5103?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8b3V0ZG9vcnN8fHx8fHwxNjUxNzAzOTk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2000);
+}
+.aboutH1 {
+  display: flex;
+  justify-content: center;
+}
+.aboutP {
+  display: flex;
+  justify-content: center;
+}
