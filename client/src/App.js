@@ -14,6 +14,8 @@ import Header from './components/header';
 import Footer from './components/footer/footer';
 import SignUp from './pages/Signup';
 import SinglePost from './pages/SinglePost';
+import './App.css';
+import NotFoundPage from './pages/Notfound';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -66,6 +68,10 @@ function App() {
           <Route
             path='/me'
             element={<Profile />}
+          />
+          <Route
+            path='*'
+            element={<NotFoundPage />}
           />
         </Routes>
 

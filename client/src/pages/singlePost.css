@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.5);
-  height: 30vh;
+  height: 40vh;
+  /* background: url(https://source.unsplash.com/1200x500/?darkbackground) */
+  background: url(https://images.unsplash.com/photo-1520273288003-a449a25c5103?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8b3V0ZG9vcnN8fHx8fHwxNjUxNzAzOTk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2000);
 }
 
 .postCards {
@@ -12,6 +14,31 @@
   flex-direction: row;
 }
 
+.wrapper{
+  background: url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1500&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFja2dyb3VuZHx8fHx8fDE2NTE3MDc2MjU&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2200);
+}
+
+.addpostDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addpostDiv button {
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.addpostDiv button:hover {
+  background: #fff;
+  color: #ff9966;
+}
+
+.addpostBtn {
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+}
 
 
 /* Single Post  */
@@ -104,7 +131,7 @@ p {
   color: white;
   font-size: 1.2rem;
   box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   text-decoration: none;
 }
 
