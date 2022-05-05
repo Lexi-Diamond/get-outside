@@ -40,6 +40,7 @@ footer {
   bottom: 0;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 footer.MuiBox-root.css-9jyc04 {
   background-color: #1976D2;

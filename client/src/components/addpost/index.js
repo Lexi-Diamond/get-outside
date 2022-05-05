@@ -102,7 +102,7 @@ const PostForm = () => {
             Character Count: {characterCount}/280
           </p> */}
           <form className="flex-row justify-center justify-space-between-md align-center">
-            <div className="addpostDiv" style={{maxHeight: 20}}>
+            <div className="addpostDiv" style={{ maxHeight: 20 }}>
               <Button className="addpostBtn" variant="outlined" onClick={handleClickOpen}>
                 Click here to create a post
               </Button>
@@ -142,9 +142,9 @@ const PostForm = () => {
           </form>
         </>
       ) : (
-        <p>
+        <p className="btn_primary">
           You need to be logged in to share your posts. Please{" "}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <Link style={{ color: 'white' }} to="/login">login</Link> or <Link style={{ color: 'white' }} to="/signup">signup.</Link>
         </p>
       )}
     </div>
