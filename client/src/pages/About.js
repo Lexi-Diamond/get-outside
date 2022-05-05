@@ -20,7 +20,7 @@ export default function Aboutus() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundImage: 'url(https://idwebhost.com/blog/wp-content/uploads/2020/07/halaman-about-me-pada-website-2.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
