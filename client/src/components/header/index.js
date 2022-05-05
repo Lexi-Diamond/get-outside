@@ -1,64 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import './styles.css';
-
-// import Auth from '../../utils/auth';
-
-// const Header = () => {
-//   const logout = (event) => {
-//     event.preventDefault();
-//     Auth.logout();
-//   };
-//   return (
-//     <>
-//       <nav className="navbar navbar-expand-custom navbar-mainbg">
-//         <button className="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//           <i className="fas fa-bars text-white"></i>
-//         </button>
-//         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//           <ul className="navbar-nav ml-auto">
-//             <div className="hori-selector"><div className="left"></div><div className="right"></div></div>
-//             <li className="nav-item">
-//               <Link to="/">
-//                 <a className="nav-link"><i className="fas fa-tachometer-alt"></i>Home</a>
-//               </Link>
-//             </li>
-//             <li className="nav-item">
-//               <Link to="/me">
-//                 <a className="nav-link"><i className="fas fa-tachometer-alt"></i>Profile</a>
-//               </Link>
-//             </li>
-//           </ul>
-//           {
-//             Auth.loggedIn() ? (
-//               <button className="navBtn" onClick={logout}>
-//                 Logout
-//               </button>
-//             ) : (
-//               <>
-//                 <Link className="navBtn" to="/login">
-//                   Login
-//                 </Link>
-//                 <Link className="navBtn" to="/signup">
-//                   Signup
-//                 </Link>
-//               </>
-//             )
-//           }
-
-//         </div>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default Header;
-
-
-
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
@@ -126,7 +65,7 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            Go OutSide
+            Get OutSide
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
