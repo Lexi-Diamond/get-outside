@@ -32,22 +32,44 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 footer {
   bottom: 0;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
+
 footer.MuiBox-root.css-9jyc04 {
   background-color: #1976D2;
 }
+
 p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root {
   color: #fff;
 }
+
 p.MuiTypography-root.MuiTypography-body2.css-r40f8v-MuiTypography-root {
   color: #fff;
+}
+
+.notFound {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.notFound h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.notFound a {
+  font-size: 3rem;
+  text-decoration: none;
 }
