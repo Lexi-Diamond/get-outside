@@ -40,11 +40,8 @@ const Profile = () => {
     <div>
 
       <div >
-        {/* <h2 style={{ textAlign: 'center', margin: '2rem' }}>
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile
-        </h2> */}
         <AddPost />
-        <div className="col-12 col-md-10 mb-5">
+        <div>
           <PostList
             posts={user.posts}
             title={`${user.username}'s posts`}
