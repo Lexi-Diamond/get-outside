@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 
 import AddPost from '../components/Addpost';
 import PostList from '../components/PostList';
+import Loading from '../components/loadingIcon'
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -23,7 +24,7 @@ const Profile = () => {
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (!user?.username) {
@@ -56,7 +57,7 @@ const Profile = () => {
           <div
             style={{ border: '2px solid #ff5e62' }}
           >
-            
+
           </div>
         )}
       </div>

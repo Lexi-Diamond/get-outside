@@ -37,6 +37,7 @@
   box-shadow: 6px 0px 0px #1976D2;
   outline: transparent;
   position: relative;
+  border-radius: 15px;
 }
 
 .commentBtn::after {
