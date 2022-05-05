@@ -17,6 +17,7 @@ import SinglePost from './pages/SinglePost';
 import './App.css';
 import NotFoundPage from './pages/Notfound';
 
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
