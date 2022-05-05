@@ -4,7 +4,6 @@
   align-items: center;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.5);
   height: 40vh;
-  /* background: url(https://source.unsplash.com/1200x500/?darkbackground) */
   background: url(https://images.unsplash.com/photo-1520273288003-a449a25c5103?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8b3V0ZG9vcnN8fHx8fHwxNjUxNzAzOTk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2000);
 }
 
@@ -26,9 +25,8 @@
 
 .addpostDiv button {
   color: #fff;
-  align-items: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .addpostDiv button:hover {
@@ -43,7 +41,6 @@
 
 /* Single Post  */
 .wrapper {
-  height: 100%;
   width: 100%;
   height: 100vh;
 }
@@ -54,7 +51,7 @@
   font-size: 2rem;
   font-style: italic;
   font-family: monospace;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .blog_post {
@@ -62,7 +59,6 @@
   padding: 6rem 3rem 6rem 6rem;
   background: #fff;
   max-width: 80%;
-  /* max-height: fit-content; */
   max-height: 85%;
   scroll-behavior: smooth;
   border-radius: 10px;

@@ -46,13 +46,6 @@ const PostForm = () => {
       } catch (e) {
         console.error(e);
       }
-
-      // update me object's cache
-      // const { me } = cache.readQuery({ query: QUERY_ME });
-      // cache.writeQuery({
-      //   query: QUERY_ME,
-      //   data: { me: { ...me, posts: [...me.posts, addPost] } },
-      // });
     },
   });
 
@@ -75,16 +68,11 @@ const PostForm = () => {
     handleClose();
   };
 
-  // const handleSubmit = async () => {
-  //   const { data } = await addPost(formState)
-  // }
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
     if (name === "postText" && value.length <= 280) {
       setPostText(value);
-      // setFormState({...formState, postText: value});
       setCharacterCount(value.length);
     }
   };
@@ -94,13 +82,6 @@ const PostForm = () => {
 
       {Auth.loggedIn() ? (
         <>
-          {/* <p
-            className={`m-0 ${
-              characterCount === 280 || error ? "text-danger" : ""
-            }`}
-          >
-            Character Count: {characterCount}/280
-          </p> */}
           <form className="flex-row justify-center justify-space-between-md align-center">
             <div className="addpostDiv" style={{ maxHeight: 20 }}>
               <Button className="addpostBtn" variant="outlined" onClick={handleClickOpen}>

@@ -73,3 +73,7 @@ p.MuiTypography-root.MuiTypography-body2.css-r40f8v-MuiTypography-root {
   font-size: 3rem;
   text-decoration: none;
 }
+
+.MuiBox-root.css-1a255yu {
+  min-height: 0;
+}

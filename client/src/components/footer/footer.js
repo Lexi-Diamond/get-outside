@@ -9,8 +9,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        www.gooutside.com
+      <Link color="inherit" href="https://github.com/Lexi-Diamond/get-outside">
+        www.getoutside.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -28,7 +28,7 @@ export default function Footer() {
       }}
     >
       <CssBaseline />
-    
+
       <Box
         component="footer"
         sx={{

@@ -28,7 +28,7 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4 style={{margin:100, fontSize: '2rem'}}>
+      <h4 style={{ margin: 100, fontSize: '2rem' }}>
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
@@ -39,23 +39,24 @@ const Profile = () => {
     <div>
 
       <div >
-        <h2 style={{ textAlign: 'center', margin: '2rem' }}>
+        {/* <h2 style={{ textAlign: 'center', margin: '2rem' }}>
           Viewing {userParam ? `${user.username}'s` : 'your'} profile
-        </h2>
+        </h2> */}
         <AddPost />
         <div className="col-12 col-md-10 mb-5">
           <PostList
             posts={user.posts}
-            title={`${user.username}'s posts...`}
-            showTitle={false}
-            showUsername={false}
+            title={`${user.username}'s posts`}
+            showTitle={true}
+            showUsername={true}
           />
         </div>
+
         {!userParam && (
           <div
-            style={{ border: '1px solid #1a1a1a' }}
+            style={{ border: '2px solid #ff5e62' }}
           >
-
+            
           </div>
         )}
       </div>

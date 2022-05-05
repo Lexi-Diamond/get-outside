@@ -16,6 +16,7 @@ import SignUp from './pages/Signup';
 import SinglePost from './pages/SinglePost';
 import './App.css';
 import NotFoundPage from './pages/Notfound';
+import About from './pages/About';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -68,6 +69,10 @@ function App() {
           <Route
             path='/me'
             element={<Profile />}
+          />
+          <Route
+            path='/about'
+            element={<About />}
           />
           <Route
             path='*'
