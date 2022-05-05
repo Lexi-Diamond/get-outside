@@ -85,7 +85,7 @@ const PostForm = () => {
           <form className="flex-row justify-center justify-space-between-md align-center">
             <div className="addpostDiv" style={{ maxHeight: 20 }}>
               <Button className="addpostBtn" variant="outlined" onClick={handleClickOpen}>
-                Click here to create a post
+                CREATE A POST
               </Button>
               <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>CREATE A POST</DialogTitle>
