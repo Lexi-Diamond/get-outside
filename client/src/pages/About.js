@@ -42,12 +42,7 @@ export default function Aboutus() {
               ABOUT US
             </Typography>
             <Typography component='p' variant='p' >
-              Hi there!
-              My name is [name] and I am very happy to welcome you on board with [Company]!
-              You joined thousands of [users persona profession] who are already skyrocketing their sales with [Company] by:
-              [Benefit 1] [Benefit 2] [Benefit 3]
-              Theres just one more tiny step you need to take to achieve all these amazing things:
-              [CTA that activates the customer]
+                Go Outside is a blog for people who love to be active outdoors. Our community of users can post about their latest adventure and comment on other users posts. Share and be inspired to Go Outside!
             </Typography>
           </Box>
         </Grid>
