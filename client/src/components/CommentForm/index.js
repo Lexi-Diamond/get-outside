@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import './style.css';
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
@@ -20,7 +21,7 @@ const CommentForm = ({ postId }) => {
         variables: {
           postId,
           commentText,
-          commentAuthor: Auth.getProfile().data.username,
+          commentOwner: Auth.getProfile().data.username,
         },
       });
 
@@ -40,18 +41,11 @@ const CommentForm = ({ postId }) => {
   };
 
   return (
-    <div>
-      <h4>What are your thoughts on this post?</h4>
+    <div className='commentDiv'>
+      <h4 style={{ marginTop: '2rem' }}>Make sure to leave a comment?</h4>
 
       {Auth.loggedIn() ? (
         <>
-          <p
-            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
-              }`}
-          >
-            Character Count: {characterCount}/280
-            {error && <span className="ml-2">{error.message}</span>}
-          </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
@@ -61,22 +55,22 @@ const CommentForm = ({ postId }) => {
                 name="commentText"
                 placeholder="Add your comment..."
                 value={commentText}
-                className="form-input w-100"
+                className="textArea"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="commentBtn" type="submit">
                 Add Comment
               </button>
             </div>
           </form>
         </>
       ) : (
-        <p>
-          You need to be logged in to share your posts. Please{' '}
+        <p style={{ marginTop: '2rem' }}>
+          You need to be logged in to make a comment{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

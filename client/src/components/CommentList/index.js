@@ -1,35 +1,35 @@
 import React from 'react';
+import '../CommentForm/style.css';
 
 const CommentList = ({ comments = [] }) => {
   if (!comments.length) {
-    return <h3>No Comments Yet</h3>;
+    return <h3 style={{ margin: '2rem', color: 'black' }}>No Comments Yet</h3>;
   }
 
   return (
-    <>
+    <div className='commentListDiv'>
       <h3
-        className="p-5 display-inline-block"
-        style={{ borderBottom: '1px dotted #1a1a1a' }}
+        style={{ borderBottom: '1px solid #1a1a1a', color: 'black', fontSize: '1.5rem', marginTop: '3rem', marginLeft: '6rem', marginRight: '10rem' }}
       >
-        Comments
+        {comments.length} Comments on this Post
       </h3>
-      <div className="flex-row my-4">
+      <div className="commentList">
         {comments &&
           comments.map((comment) => (
-            <div key={comment._id} className="col-12 mb-3 pb-3">
-              <div className="p-3 bg-dark text-light">
-                <h5 className="card-header">
-                  {comment.commentAuthor} commented{' '}
-                  <span style={{ fontSize: '0.825rem' }}>
+            <div className='commentListbox' key={comment._id}>
+              <div>
+                <h5 style={{ fontSize: '15px' }}>
+                  {comment.commentOwner} commented{' '}
+                  <span style={{ fontSize: '15px' }}>
                     on {comment.createdAt}
                   </span>
                 </h5>
-                <p className="card-body">{comment.commentText}</p>
+                <p>{comment.commentText}</p>
               </div>
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
