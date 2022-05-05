@@ -17,19 +17,20 @@ const CommentList = ({ comments = [] }) => {
         {comments &&
           comments.map((comment) => (
             <div className='commentListbox' key={comment._id}>
-              <div>
-                <h5 style={{ fontSize: '15px' }}>
-                  {comment.commentOwner} commented{' '}
+              <div >
+                <h5 style={{
+                  fontSize: '15px', paddingBottom: '2rem' }}>
+                  { comment.commentOwner } commented{' '}
                   <span style={{ fontSize: '15px' }}>
-                    on {comment.createdAt}
-                  </span>
-                </h5>
-                <p>{comment.commentText}</p>
-              </div>
+                  on {comment.createdAt}
+                </span>
+              </h5>
+              <p>{comment.commentText}</p>
+            </div>
             </div>
           ))}
-      </div>
     </div>
+    </div >
   );
 };
 

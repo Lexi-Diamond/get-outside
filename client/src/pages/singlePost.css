@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
 .addPost {
   display: flex;
   justify-content: center;
@@ -118,6 +120,10 @@ p {
 .btn_primary:hover {
   box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
 }
+
+
+/* About Page */
+
 /* About Page */
 
 /* .addpostDiv {
@@ -240,3 +246,4 @@ p {
     z-index: 0;
   }
 }
+

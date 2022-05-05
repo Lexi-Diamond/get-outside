@@ -17,7 +17,7 @@ const NotFoundPage = () => {
   return (
     <div className="notFound">
 
-      <h3> This Page Doesnt Exist</h3>
+      <h3> 404 Error - This Page Doesnt Exist</h3>
       <h4>You will be redirected to homepage in {counter}</h4>
 
     </div>

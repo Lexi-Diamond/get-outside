@@ -5,22 +5,23 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import './singlePost.css';
 
 const theme = createTheme();
 
 export default function Aboutus() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid container component="main" sx={{ height: "81vh" }}>
         <CssBaseline />
         <Grid
           item
-          xs={false}
-          sm={4}
+          xs={12}
+          sm={5}
           md={7}
           sx={{
             backgroundImage:
-              "url(https://idwebhost.com/blog/wp-content/uploads/2020/07/halaman-about-me-pada-website-2.jpg)",
+              "url(https://images.unsplash.com/photo-1520273288003-a449a25c5103?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1500&ixid=MnwxfDB8MXxyYW5kb218MHx8b3V0ZG9vcnN8fHx8fHwxNjUxNzAzOTk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2200)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -44,14 +45,19 @@ export default function Aboutus() {
               sx={{
                 fontSize: "30px",
                 fontWeight: "bold",
-                fontFamily: "Helvetica",
+                fontFamily: "Sen",
               }}
               component="h1"
               variant="h5"
             >
               ABOUT US
             </Typography>
-            <Typography component="p" variant="p">
+            <Typography component="p" variant="p"
+              sx={{
+                fontSize: "20px",
+                fontFamily: "Sen",
+                lineHeight: '2.6rem'
+              }} >
               Get Outside is a blog for people who love to be active outdoors.
               Our community of users can post about their latest adventure and
               comment on other users posts. Share and be inspired to Get
@@ -61,11 +67,11 @@ export default function Aboutus() {
           <Box
             component="img"
             sx={{
-              height: 400,
-              width: 500,
-              marginLeft: '5rem',
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-            alt="The house from the offer."
+            alt="user working on thier laptop."
             src="../login.png"
           />
         </Grid>
