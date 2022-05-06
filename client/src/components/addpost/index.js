@@ -123,7 +123,7 @@ const PostForm = () => {
           </form>
         </>
       ) : (
-        <p className="btn_primary">
+        <p className="btn_notloggedIn">
           You need to be logged in to share your posts. Please{" "}
           <Link style={{ color: 'white' }} to="/login">login</Link> or <Link style={{ color: 'white' }} to="/signup">signup.</Link>
         </p>
