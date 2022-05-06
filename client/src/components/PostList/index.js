@@ -8,7 +8,7 @@ const postList = ({
   showTitle = true
 }) => {
   if (!posts.length) {
-    return <h3>No posts Yet</h3>;
+    return <h3 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '5em'}}>No posts Yet</h3>;
   }
 
   return (
