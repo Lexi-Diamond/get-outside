@@ -12,7 +12,7 @@ const theme = createTheme();
 export default function Aboutus() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "81vh" }}>
+      <Grid container component="main" sx={{ height: "84vh" }}>
         <CssBaseline />
         <Grid
           item
@@ -21,7 +21,7 @@ export default function Aboutus() {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1520273288003-a449a25c5103?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1500&ixid=MnwxfDB8MXxyYW5kb218MHx8b3V0ZG9vcnN8fHx8fHwxNjUxNzAzOTk0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=2200)",
+              "url(https://images.unsplash.com/photo-1501696461415-6bd6660c6742?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -65,6 +65,11 @@ export default function Aboutus() {
               Outside!
             </Typography>
           </Box>
+          <div class="button-block">
+            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"><i class="fab fa-facebook"></i></a></div>
+            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-twitter"></i></a></div>
+            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-instagram"></i></a></div>
+          </div>
         </Grid>
       </Grid>
     </ThemeProvider>
