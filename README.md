@@ -21,7 +21,7 @@ The nav bar includes links to; `Homepage`, `Profile`, `About` and an icon that c
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Links](#links)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
 
