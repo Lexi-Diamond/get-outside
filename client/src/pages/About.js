@@ -65,11 +65,11 @@ export default function Aboutus() {
               Outside!
             </Typography>
           </Box>
-          <div class="button-block">
-            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"><i class="fab fa-facebook"></i></a></div>
-            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-twitter"></i></a></div>
-            <div class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-instagram"></i></a></div>
-          </div>
+          <Box class="button-block">
+            <Box class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"><i class="fab fa-facebook"></i></a></Box>
+            <Box class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-twitter"></i></a></Box>
+            <Box class="social"><a href="https://github.com/Lexi-Diamond/get-outside" target="_blank"> <i class="fab fa-instagram"></i></a></Box>
+          </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
