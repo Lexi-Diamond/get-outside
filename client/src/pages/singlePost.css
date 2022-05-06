@@ -124,28 +124,13 @@ p {
 
 /* About Page */
 
-/* About Page */
-
-/* .addpostDiv {
+ .addpostDiv {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem;
 }
 
-.addpostDiv button {
-  color: #fff;
-  text-align: center;
-  margin-top: 6rem;
-}
-
-.addpostDiv button:hover {
-  background: #fff;
-  color: #ff9966;
-}
-
-.addpostBtn {
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
-} */
 
 .wrap {
   height: 100%;

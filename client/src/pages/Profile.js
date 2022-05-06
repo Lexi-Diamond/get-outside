@@ -51,10 +51,7 @@ const Profile = () => {
         </div>
 
         {!userParam && (
-          <div
-            style={{ border: '2px solid #ff5e62' }}
-          >
-
+          <div>
           </div>
         )}
       </div>

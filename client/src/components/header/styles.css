@@ -225,10 +225,12 @@ div#navbarSupportedContent {
 .navBtn:hover {
   cursor: pointer;
 }
+
 .navBarLinks {
   color: white;
   text-decoration: none;
 }
+
 .navSandwich {
   display: flex;
   align-items: center;
@@ -238,4 +240,11 @@ div#navbarSupportedContent {
 .navHamburger {
   text-decoration: none;
   color: black;
+}
+
+
+/* navbar logo */
+
+.MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-2s90m6-MuiAvatar-root {
+  background: none;
 }

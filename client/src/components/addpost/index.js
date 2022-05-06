@@ -82,7 +82,7 @@ const PostForm = () => {
 
       {Auth.loggedIn() ? (
         <>
-          <form className="flex-row justify-center justify-space-between-md align-center">
+          <form>
             <div className="addpostDiv" style={{ maxHeight: 20 }}>
               <Button className="addpostBtn" variant="outlined" onClick={handleClickOpen}>
                 CREATE A POST

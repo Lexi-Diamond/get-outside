@@ -31,7 +31,7 @@ export default function Aboutus() {
             backgroundPosition: "center",
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={7} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -43,7 +43,7 @@ export default function Aboutus() {
           >
             <Typography
               sx={{
-                fontSize: "30px",
+                fontSize: "40px",
                 fontWeight: "bold",
                 fontFamily: "Sen",
               }}
@@ -56,7 +56,8 @@ export default function Aboutus() {
               sx={{
                 fontSize: "20px",
                 fontFamily: "Sen",
-                lineHeight: '2.6rem'
+                lineHeight: '2.6rem',
+                marginTop: '2rem'
               }} >
               Get Outside is a blog for people who love to be active outdoors.
               Our community of users can post about their latest adventure and
@@ -64,16 +65,6 @@ export default function Aboutus() {
               Outside!
             </Typography>
           </Box>
-          <Box
-            component="img"
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            alt="user working on thier laptop."
-            src="../login.png"
-          />
         </Grid>
       </Grid>
     </ThemeProvider>
