@@ -48,19 +48,6 @@
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 700px) {
-  /*Tablets [601px -> 1200px]*/
-  .blog_post {
-    max-width: px;
-  }
-
-  .btn_primary {
-    position: fixed;
-    top: 5px;
-    right: 2px;
-  }
-}
-
 .img_pod {
   height: 110px;
   width: 110px;
@@ -124,7 +111,7 @@ p {
 
 /* About Page */
 
- .addpostDiv {
+.addpostDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,13 +136,11 @@ p {
   font-weight: 700;
   color: #fff;
   background: #1976d2;
-  background: linear-gradient(
-    90deg,
-    #ff9966,
-    (129, 230, 217, 1) 0%,
-    #ff5e62,
-    (79, 209, 197, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      #ff9966,
+      (129, 230, 217, 1) 0%,
+      #ff5e62,
+      (79, 209, 197, 1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px #ff9966, (79, 209, 197, 0.64);
@@ -224,6 +209,7 @@ p {
     opacity: 1;
     z-index: 0;
   }
+
   100% {
     width: 300px;
     height: 300px;
