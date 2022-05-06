@@ -95,7 +95,7 @@ Be interactive (i.e., accept and respond to user input)
 Include authentication (JWT).
 ```
 
-# Contributers:
+# Contributors:
 
 [![madebyraj.png](/client/public/rajveer-github.svg)](https://www.github.com/rajveer-s)
 
